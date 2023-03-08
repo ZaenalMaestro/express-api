@@ -1,6 +1,7 @@
 {
   "name": "express-api",
   "version": "1.0.0",
+  "author": "Zaenal",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -9,5 +10,14 @@
     "express": "^4.18.2",
     "mysql2": "^3.2.0",
     "sequelize": "^6.29.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
+  },
+  "scripts": {
+      "migrate:up": "npx sequelize-cli db:migrate",
+      "migrate:undo": "npx sequelize-cli db:migrate:undo",
+      "seed:up": "npx sequelize-cli db:seed:all",
+      "seed:undo": "npx sequelize-cli db:seed:undo"
   }
 }
